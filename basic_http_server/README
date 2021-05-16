@@ -1,0 +1,5 @@
+1, so basically, webserver is socket listening on one port.
+2. whenever browser send request from URL first thing it looks for index.html ( by std)
+and that's the home page
+
+3. HTTP headers are important. to send HTTP response to browser

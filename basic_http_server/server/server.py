@@ -31,7 +31,8 @@ def favicon():
 def createServer():
     serversocket = socket(AF_INET, SOCK_STREAM)
     try:
-        serversocket.bind(('localhost', 9000))
+        # serversocket.bind(('localhost', 9000))
+        serversocket.bind(('dpk-basicserver.herokuapp.com', 9000))
         # 5 represents number of connections allowed in waiting queue
         serversocket.listen(5)
         while(1):

@@ -4,11 +4,15 @@
 
 
 from socket import *
+import os
+from os import path
 from pprint import pprint
 
 def render_template(template_name="index.html",vars=""):
     html_str = ""
-    with open(template_name, 'r') as f:
+    root_dir = os.path.dirname(os.path.abspath(__file__))
+    template_path = path.join(root_dir,template_name)
+    with open(template_path, 'r') as f:
         html_str = f.read()
         # html_str = html_str.format(**vars)
     # print (html_str)

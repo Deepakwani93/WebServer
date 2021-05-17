@@ -32,7 +32,7 @@ def createServer():
     serversocket = socket(AF_INET, SOCK_STREAM)
     try:
         # serversocket.bind(('localhost', 9000))
-        serversocket.bind(('', 9000))
+        serversocket.bind(('', os.environ.get(PORT,9000))
         # 5 represents number of connections allowed in waiting queue
         serversocket.listen(5)
         while(1):
